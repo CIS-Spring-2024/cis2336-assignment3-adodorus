@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coog Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #ee1010;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #555;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px; 
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        section {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #ee1010;
+            text-align: center;
+        }
+        h3 {
+            color: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #555;
+            color: #fff;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: static;
+            bottom: 0;
+            width: 100%;
+        }
+        .nav-button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px; 
+        }
+        img {
+            width: 50px;
+            height: auto; 
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(4.5); 
+        }
+        .small-nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .small-nav button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+            width: auto;
+        }
+        .small-nav button:hover {
+            background-color: #777;
+        }
+        .small-nav #order-button {
+            background-color: #ee1010;
+            color: #fff;
+        }
+        #order-now {
+            text-align: center;
+            margin: 40px 0;
+        }
+        #order-now button {
+            background-color: #ee1010;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        #order-now button:hover {
+            background-color: #ff3333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Coog Cafe</h1>
+</header>
+
+<nav>
+    <div class="dropdown">
+        <button class="nav-button" onclick="window.location.href='homepage.html'">Homepage</button>
+    </div>
+    <div class="dropdown">
+        <button class="nav-button">Services</button>
+        <div class="dropdown-content">
+            <a href="order.html">Order</a>
+            <a href="menu.html">Menu</a>
+            <a href="schedule.html">Schedule</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="nav-button">About</button>
+        <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="staff.html">Staff</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="nav-button">More</button>
+        <div class="dropdown-content">
+            <a href="events.html">Events</a>
+            <a href="hiring.html">Hiring</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </div>
+</nav>
+
+<section id="deli">
+    <h2>Deli</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>A Look at the Food</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Classic Turkey Sandwich</td>
+                <td><img src="Images/Turkey Sandwich.jpg" alt="Classic Turkey Sandwich"></td>
+                <td>$5.99</td>
+            </tr>
+            <tr>
+                <td>Roast Beef and Wrap</td>
+                <td><img src="Images/roastbeefwrap.jpg" alt="Roast Beef Wrap"></td>
+                <td>$6.99</td>
+            </tr>
+            <tr>
+                <td>Vegetarian Panini</td>
+                <td><img src="Images/veggiepanini.jpg" alt="Vegetarian Panini"></td>
+                <td>$6.99</td>
+            </tr>
+            <tr>
+                <td>Italian Sub</td>
+                <td><img src="Images/italiansub.jpg" alt="Italian Sub"></td>
+                <td>$7.99</td>
+            </tr>
+            <tr>
+                <td>Chicken Salad Croissant</td>
+                <td><img src="Images/chickencrossiant.jpg" alt="Chicken Salad Croissant"></td>
+                <td>$5.99</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="homestyle">
+    <h2>Homestyle</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>A Look at the Food</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Buttermilk Pancakes</td>
+            <td><img src="Images/pancakes.jpg" alt="Buttermilk Pancakes"></td>
+            <td>$9.99</td>
+        </tr>
+        <tr>
+            <td>Bacon and Eggs</td>
+            <td><img src="Images/baconeggs.jpg" alt="Bacon and Eggs"></td>
+            <td>$7.99</td>
+        </tr>
+        <tr>
+            <td>Biscuits and Gravy</td>
+            <td><img src="Images/biscuitsngravy.jpg" alt="Biscuits and Gravy"></td>
+            <td>$5.99</td>
+        </tr>
+        <tr>
+            <td>Belgian Waffles</td>
+            <td><img src="Images/belgianwaffles.jpeg" alt="Belgian Waffles"></td>
+            <td>$7.99</td>
+        </tr>
+        <tr>
+            <td>French Toast Sticks</td>
+            <td><img src="Images/frenchtoast.jpg" alt="French Toast Sticks"></td>
+            <td>$6.99</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="grilled">
+    <h2>Grilled</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>A Look at the Food</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Cheeseburger</td>
+            <td><img src="Images/cheeseburger.jpg" alt="Cheeseburger"></td>
+            <td>$8.99</td>
+        </tr>
+        <tr>
+            <td>Grilled Chicken Caesar Wrap</td>
+            <td><img src="Images/Grilled-Chicken-Caesar-Wrap.jpg" alt="Grilled Chicken Caesar Wrap"></td>
+            <td>$8.99</td>
+        </tr>
+        <tr>
+            <td>Philly Cheesesteak</td>
+            <td><img src="Images/cheesesteak.jpg" alt="Philly Cheesesteak"></td>
+            <td>$9.99</td>
+        </tr>
+        <tr>
+            <td>Grilled Veggie Quesadilla</td>
+            <td><img src="Images/grilled-vegetable-quesadillas.jpg" alt="Grilled Veggie Quesadilla"></td>
+            <td>$8.99</td>
+        </tr>
+        <tr>
+            <td>Fish Sandwich</td>
+            <td><img src="Images/fish-sandwich.jpg" alt="Fish Sandwich"></td>
+            <td>$9.99</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="salad">
+    <h2>Salad and Fruit Bar</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>A Look at the Food</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Garden Salad</td>
+            <td><img src="Images/gardensalad.jpg" alt="Garden Salad"></td>
+            <td>$7.99</td>
+        </tr>
+        <tr>
+            <td>Cobb Salad</td>
+            <td><img src="Images/cobbsalad.jpg" alt="Cobb Salad"></td>
+            <td>$8.99</td>
+        </tr>
+        <tr>
+            <td>Caesar Salad</td>
+            <td><img src="Images/caesarsalad.jpg" alt="Caesar Salad"></td>
+            <td>$8.99</td>
+        </tr>
+        <tr>
+            <td>Fruit Salad</td>
+            <td><img src="Images/fruitsalad.jpg" alt="Fruit Salad"></td>
+            <td>$7.99</td>
+        </tr>
+        <tr>
+            <td>Assorted Fruits</td>
+            <td><img src="Images/assortedfruits.jpg" alt="Assorted Fruits"></td>
+            <td>$6.99</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="pizza">
+    <h2>Pizza</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>A Look at the Food</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Cheese Pizza</td>
+            <td><img src="Images/cheesepizza.jpg" alt="Cheese Pizza"></td>
+            <td>$9.99</td>
+        </tr>
+        <tr>
+            <td>Pepperoni Pizza</td>
+            <td><img src="Images/pepperonipizza.png" alt="Pepperoni Pizza"></td>
+            <td>$10.99</td>
+        </tr>
+        <tr>
+            <td>Hawaiian Pizza</td>
+            <td><img src="Images/Hawaiian-Pizza.jpg" alt="Hawaiian Pizza"></td>
+            <td>$11.99</td>
+        </tr>
+        <tr>
+            <td>Veggie Pizza</td>
+            <td><img src="Images/vegetarian-pizza.jpg" alt="Veggie Pizza"></td>
+            <td>$10.99</td>
+        </tr>
+        <tr>
+            <td>BBQ Chicken Pizza</td>
+            <td><img src="Images/BBQ-Chicken-Pizza.jpg" alt="BBQ Chicken Pizza"></td>
+            <td>$11.99</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="sweets">
+    <h2>Sweets</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>A Look at the Food</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Chocolate Chip Cookies</td>
+            <td><img src="Images/chocochip.jpg" alt="Chocolate Chip Cookies"></td>
+            <td>$2.99</td>
+        </tr>
+        <tr>
+            <td>Fudge Brownies</td>
+            <td><img src="Images/fudgebrownie.jpg" alt="Fudge Brownies"></td>
+            <td>$3.99</td>
+        </tr>
+        <tr>
+            <td>Vanilla Cupcakes</td>
+            <td><img src="Images/cupcake.jpg" alt="Vanilla Cupcakes"></td>
+            <td>$2.99</td>
+        </tr>
+        <tr>
+            <td>Cinnamon Rolls</td>
+            <td><img src="Images/cinnarolls.jpg" alt="Cinnamon Rolls"></td>
+            <td>$3.99</td>
+        </tr>
+        <tr>
+            <td>Assorted Donuts</td>
+            <td><img src="Images/donuts.jpg" alt="Assorted Donuts"></td>
+            <td>$2.99</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="order-now">
+    <button onclick="window.location.href='order.html'">Order Now!</button>
+</section>
+
+<footer>
+    <p>&copy; 2024 The Coog Cafe. All rights reserved.</p>
+</footer>
+
+<div class="small-nav">
+    <button onclick="scrollToSection('deli')">Deli</button>
+    <button onclick="scrollToSection('homestyle')">Homestyle</button>
+    <button onclick="scrollToSection('grilled')">Grilled</button>
+    <button onclick="scrollToSection('salad')">Salad and Fruit Bar</button>
+    <button onclick="scrollToSection('pizza')">Pizza</button>
+    <button onclick="scrollToSection('sweets')">Sweets</button>
+    <button id="order-button" onclick="window.location.href='order.html'">ORDER</button>
+</div>
+
+<script>
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+
+</body>
+</html>
